@@ -1,7 +1,9 @@
-
+---
 - name: install wartest
   become: true
   become_user: ngom
+  hosts: 192.168.119.136
   tasks:
-    - name: some task
-      ...
+    - name: Afficher un message
+      command: echo "Installation du conteneur wartest en cours"
+
