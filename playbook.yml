@@ -2,7 +2,7 @@
 ---
 - name: install wartest
   become: true
-  become_user: ngom
+  become_user: jenkins
   hosts: 192.168.119.136
   vars:
     ansible_python_interpreter: /usr/bin/python3
