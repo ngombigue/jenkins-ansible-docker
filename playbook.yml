@@ -1,6 +1,7 @@
 - name: install wartest
   hosts: all
   become: yes
+  become_user: root
   roles:
     - wartest
 
