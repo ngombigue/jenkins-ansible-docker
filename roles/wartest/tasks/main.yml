@@ -1,5 +1,5 @@
 - name: install pip
-  yum:
+  apt:
     name: python-pip
     state: present
 
