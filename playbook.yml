@@ -1,7 +1,7 @@
 - name: Install wartest
   hosts: all
   become: yes
-  become_user: root
+  become_user: jenkins
   roles:
     - wartest
 
