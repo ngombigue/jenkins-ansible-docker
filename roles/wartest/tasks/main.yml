@@ -1,18 +1,23 @@
-- name: install pip
+- name: Install pip
   apt:
-    name: python-pip
+    name: python3-pip
     state: present
+  become: yes
 
-- name: pip install docker-py
+- name: Install docker and docker-compose packages via pip
   pip:
     name:
       - docker
       - docker-compose
+  become: yes
 
-- name: run container
+- name: Run Docker container
   docker_container:
     name: wartest
-    image: "{{ image }}"
-    ports: 8086:8080
+    image: "{{ image }}"
+    ports:
+      - "8086:8080"
     state: started
+  become: yes
+
  
